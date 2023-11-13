@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="con-for-btn-and-Stundent-Info">
+        <div class="mt-4">
+            <p class="text-center">Click button to get student Information</p>
+        </div>
+        <button type="button" class="btn btn-primary w-25" onclick="studentInfo()">Show</button>
+        <div id="show" class="row mt-4"></div>
+      </div>
+      <!-- <button onclick="studentInfo()">click</button>
+      <div id="show"></div> -->
+      <script>
+        const studentInfo = () => {
+    
+          class Student {
+            constructor(firstName, lastName, middleName, age, gender) {
+              this.firstName = firstName;
+              this.lastName = lastName;
+              this.middleName = middleName;
+              this.age = age;
+              this.gender = gender;
+            }
+          }
+          let stundentOne = new Student("Ayoola", "Alao", "Sulaimon", "21Years", "Male");
+          let stundentTwo = new Student("Ibukun", "Babalola", "Samuel", "20Years", "Male");
+          let stundentThree = new Student("Gbemi", "Babatude", "bukunmi", "22Years", "Male");
+          let stundentFour = new Student("Yemi", "Opadokun", "Racheal", "25Years", "Female");
+          let stundentFive = new Student("Tolulope", "Fashola", "Julius", "20Years", "Male");
+          let stundentSix = new Student("zainub", "Amodu", "Adenike", "22Years", "Female");
+          let stundentSeven = new Student("Ireti", "Okunola", "Veronica", "22Years", "Female");
+          let stundentEight = new Student("Yewande", "Akinlolu", "Gift", "22Years", "Female");
+          let stundentNine = new Student("Andrew", "Aragbaye", "Johnson", "22Years", "Male");
+          let stundentTen = new Student("Seun", "Jayeoba", "Raphael", "22Years", "Male");
+          let stundentEleven = new Student("Samson", "Oloyede", "Michael", "22Years", "Male");
+          let stundentTwelve = new Student("Victoria", "Alaba", "Bukunmi", "22Years", "Female");
+          let stundentThirteen = new Student("Yewande", "Anthony", "Victoria", "24Years", "Female");
+          let stundentForteen = new Student("Idowu", "Gabriel", "Adewale", "25Years", "Male");
+          let stundenFifteen = new Student("Oluwaseyi", "Adewale", "Roseline", "23Years", "Female");
+    
+          array = []
+          array.push(stundentOne, stundentTwo, stundentThree, stundentFour, stundentFive, stundentSix, stundentSeven, stundentEight, stundentNine, stundentTen, stundentEleven, stundentTwelve, stundentThirteen, stundentForteen, stundenFifteen);
+          array.map((obj, index) => {
+            show.innerHTML += `
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 px-3">
+                <div class="card" style="width: 100%;">
+                  <div class="card-body"> 
+                    
+                    ${index+1}
+                    <div>First-Name: ${obj.firstName}</div>
+                    <div>Last-Name: ${obj.lastName}</div>
+                    <div>Middle-Name: ${obj.middleName}</div>
+                    <div>Age: ${obj.age}</div>
+                    <div>Gender: ${obj.gender}
+                    </div>
+                </div>
+              </div>
+                `
+          })
+    
+        }
+      </script>
+</body>
+</html>
